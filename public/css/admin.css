@@ -1,0 +1,123 @@
+/* --- Admin Navigation --- */
+.admin-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: #555;
+    border: none;
+    padding: 8px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    color: #1d428a;
+    border-bottom-color: #a0c4ff;
+}
+
+.nav-button.active {
+    color: #1d428a;
+    border-bottom-color: #1d428a;
+}
+
+/* --- Section Styling --- */
+.admin-section {
+    padding: 20px 0;
+}
+
+.admin-section h2 {
+    border-left: 5px solid #e63946;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.tip {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff3cd; /* Light yellow background */
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+}
+
+/* --- Admin Tables (Specific) --- */
+#unvalidated-table, #dma-map-table {
+    box-shadow: none; /* Remove table wrapper shadow */
+}
+
+#unvalidated-table thead th, #dma-map-table thead th {
+    background-color: #e9ecef; /* Slightly darker header */
+}
+
+#unvalidated-body tr, #dma-map-body tr {
+    transition: background-color 0.2s;
+}
+
+#unvalidated-body tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* --- Editable Inputs & Buttons --- */
+.edit-input, .edit-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.save-btn, .add-button {
+    background-color: #38c172; /* Green for success/save */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.save-btn:hover, .add-button:hover {
+    background-color: #2b9a54;
+}
+
+.delete-btn {
+    background-color: #e3342f; /* Red for deletion */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #cc1f1a;
+}
+
+.highlight-column {
+    color: #e3342f; /* Visual hint for the column needing attention */
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.footer-note {
+    font-size: 0.8em;
+    color: #999;
+    text-align: center;
+    margin-top: 30px;
+}

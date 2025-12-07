@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WatchWhereLive | The Clean Sports Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -14,7 +17,7 @@
     <main class="container">
         
         <section id="controls">
-            <p>Enter your **ZIP Code** to find your **exact local channel**.</p>
+            <p>Enter your <strong>ZIP Code</strong> to find your <strong>exact local channel</strong>.</p>
             <div class="input-group">
                 <input type="text" id="zip-code-input" placeholder="Enter ZIP Code (e.g., 90210)" maxlength="5">
                 <button id="update-location-btn">Update Location</button>
@@ -27,18 +30,20 @@
         <section id="schedule-view">
             <h2>Today's Games</h2>
             
-            <table id="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Time (Your TZ)</th>
-                        <th>Sport & Matchup</th>
-                        <th>Universal Broadcast (Tier 1)</th>
-                        <th class="local-column">Your Local Viewing Solution (Layer 2)</th>
-                    </tr>
-                </thead>
-                <tbody id="schedule-body">
+            <div class="table-wrapper">
+                <table id="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time (Your TZ)</th>
+                            <th>Sport & Matchup</th>
+                            <th>Universal Broadcast (Tier 1)</th>
+                            <th class="local-column">Your Local Viewing Solution (Layer 2)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule-body">
                     </tbody>
-            </table>
+                </table>
+            </div>
         </section>
         
         <p class="monetization-note">

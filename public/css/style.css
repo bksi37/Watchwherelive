@@ -1,0 +1,211 @@
+/* Global Reset & Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa; /* Softer neutral background */
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Layout Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #1d428a; /* Primary sports blue */
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 24px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Controls Section */
+#controls {
+    padding: 24px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+#zip-code-input {
+    padding: 12px 16px;
+    flex-grow: 1;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#zip-code-input:focus {
+    border-color: #1d428a;
+    box-shadow: 0 0 0 3px rgba(29, 66, 138, 0.1);
+    outline: none;
+}
+
+#update-location-btn {
+    background-color: #1d428a;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#update-location-btn:hover {
+    background-color: #051c2d;
+    transform: translateY(-2px);
+}
+
+#location-display {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 12px;
+}
+
+/* Schedule Table */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-top: 24px;
+}
+
+#schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    min-width: 600px; /* Ensures horizontal scroll on mobile if needed */
+}
+
+#schedule-table th, #schedule-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+#schedule-table thead th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: #34495e;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#schedule-body tr:hover {
+    background-color: #eef5ff; /* Subtle hover highlight */
+}
+
+.local-solution-highlight {
+    font-weight: 600;
+    color: #e63946; /* Modern red accent */
+}
+
+/* Monetization Note */
+.monetization-note {
+    margin-top: 32px;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.monetization-note a {
+    color: #1d428a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.monetization-note a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    #controls {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #zip-code-input,
+    #update-location-btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #schedule-table th, #schedule-table td {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .monetization-note {
+        font-size: 0.85em;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .table-wrapper {
+        margin-top: 16px;
+    }
+}

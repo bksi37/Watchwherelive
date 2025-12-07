@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchWhereLive | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Admin Dashboard: Data Validation</h1>
+        <p class="subtitle">Review and input the proprietary **Layer 2 Regional Broadcast (RSN)** data.</p>
+        
+        <nav class="admin-nav">
+            <button id="nav-unvalidated" class="nav-button active">Review Unvalidated Games</button>
+            <button id="nav-dma-map" class="nav-button">Manage DMA/RSN Map</button>
+        </nav>
+
+        <hr>
+
+        <section id="unvalidated-games-section" class="admin-section">
+            <h2>Unvalidated Games (<span id="unvalidated-count">0</span>)</h2>
+            <p class="tip">These games require manual verification of the local RSN or blackout status.</p>
+            
+            <table id="unvalidated-table">
+                <thead>
+                    <tr>
+                        <th>Game ID</th>
+                        <th>Matchup (Home/Away)</th>
+                        <th>National Broadcast</th>
+                        <th><span class="highlight-column">RSN Placeholder</span></th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="unvalidated-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <section id="dma-map-section" class="admin-section hidden">
+            <h2>Master RSN/DMA Configuration</h2>
+            <p class="tip">This table stores your proprietary **ZIP Code to RSN mapping** for the target markets (e.g., Los Angeles).</p>
+            
+            <button id="add-new-mapping-btn" class="add-button">+ Add New RSN Mapping Rule</button>
+
+            <table id="dma-map-table">
+                <thead>
+                    <tr>
+                        <th>DMA Code</th>
+                        <th>Team</th>
+                        <th>Sport</th>
+                        <th>Local Channel (RSN)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="dma-map-body">
+                    </tbody>
+            </table>
+        </section>
+        
+        <p class="footer-note">Last Data Pipeline Run: <span id="last-run">Loading...</span></p>
+    </div>
+
+    <script src="js/admin.js" defer></script>
+</body>
+</html>
