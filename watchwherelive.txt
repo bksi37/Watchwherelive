@@ -1,0 +1,16 @@
+WatchWhereLive-MVP/
+├── public/                 <-- Deployed via Netlify/Vercel CDN
+│   ├── index.html          <-- The main schedule page
+│   ├── admin.html          <-- The private Admin page
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── app.js
+│       └── admin.js        <-- JavaScript for Admin page logic and API calls
+└── src/                    <-- Serverless Logic (Python)
+    ├── scraper/
+    │   └── run_scrape.py   <-- Tier 1 Scraper
+    ├── api/
+    │   └── lookup_game.py  <-- Layer 2 lookup API
+    └── db_models.py
+└── requirements.txt
