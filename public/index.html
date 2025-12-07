@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchWhereLive | The Clean Sports Schedule</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>📺 WatchWhereLive</h1>
+    </header>
+
+    <main class="container">
+        
+        <section id="controls">
+            <p>Enter your **ZIP Code** to find your **exact local channel**.</p>
+            <div class="input-group">
+                <input type="text" id="zip-code-input" placeholder="Enter ZIP Code (e.g., 90210)" maxlength="5">
+                <button id="update-location-btn">Update Location</button>
+            </div>
+            <p id="location-display">Current Location: <span id="current-location">[Default: US National Feed]</span></p>
+        </section>
+
+        <hr>
+        
+        <section id="schedule-view">
+            <h2>Today's Games</h2>
+            
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time (Your TZ)</th>
+                        <th>Sport & Matchup</th>
+                        <th>Universal Broadcast (Tier 1)</th>
+                        <th class="local-column">Your Local Viewing Solution (Layer 2)</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body">
+                    </tbody>
+            </table>
+        </section>
+        
+        <p class="monetization-note">
+            Watching online? Find streaming deals for 
+            <a href="#" target="_blank">ESPN+ (Affiliate)</a>, 
+            <a href="#" target="_blank">Peacock (Affiliate)</a>, etc.
+        </p>
+    </main>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>

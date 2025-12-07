@@ -1,0 +1,31 @@
+# --------------------------------------------------------
+# 1. SECRET/SENSITIVE FILES (DO NOT COMMIT!)
+# --------------------------------------------------------
+.env
+# --------------------------------------------------------
+# 2. PYTHON COMPILED & ENVIRONMENT FILES
+# --------------------------------------------------------
+__pycache__/
+*.pyc
+*$py.class
+
+# Virtual environment directory (common names)
+venv/
+.venv/
+env/
+
+# Dependency installers
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --------------------------------------------------------
+# 3. EDITOR & OS FILES
+# --------------------------------------------------------
+# VS Code files (User-specific settings/history)
+.vscode/
+
+# macOS Finder files
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
